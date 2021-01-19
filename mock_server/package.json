@@ -2,8 +2,9 @@
   "name": "mock_server",
   "version": "1.0.0",
   "description": "",
+  "main": "server.js",
   "scripts": {
-    "start": "json-server --watch db.json --port ${PORT:-5000} --static ../client/build"
+    "start": "node server.js"
   },
   "author": "",
   "license": "ISC",

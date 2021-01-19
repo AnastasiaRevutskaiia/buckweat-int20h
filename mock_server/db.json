@@ -1,0 +1,49 @@
+{
+  "storePrices": [
+    {
+      "storeName": "grechka123",
+      "link": "https://github.com/AnastasiaRevutskaiia/buckwheat-int20h",
+      "currentPrice": "34.5",
+      "priceHistory": [
+        {
+          "timestampMillis": "int",
+          "price": "double"
+        }
+      ]
+    },
+    {
+      "storeName": "buckweat store",
+      "link": "https://github.com/AnastasiaRevutskaiia/buckwheat-int20h",
+      "currentPrice": "40.75",
+      "priceHistory": [
+        {
+          "timestampMillis": "int",
+          "price": "double"
+        }
+      ]
+    },
+    {
+      "storeName": "kawa",
+      "link": "https://github.com/AnastasiaRevutskaiia/buckwheat-int20h",
+      "currentPrice": "29.99",
+      "priceHistory": [
+        {
+          "timestampMillis": "int",
+          "price": "double"
+        }
+      ]
+    },
+    {
+      "storeName": "anti-makaroni",
+      "link": "https://github.com/AnastasiaRevutskaiia/buckwheat-int20h",
+      "currentPrice": "15",
+      "priceHistory": [
+        {
+          "timestampMillis": "int",
+          "price": "double"
+        }
+      ]
+    }
+  ],
+  "profile": { "name": "arsenii" }
+}

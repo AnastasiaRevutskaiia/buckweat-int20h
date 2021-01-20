@@ -1,12 +1,17 @@
+const path = require('path')
 const jsonServer = require('json-server')
 const server = jsonServer.create()
 const router = jsonServer.router('db.json')
-const middlewares = jsonServer.defaults()
+const middlewares = jsonServer.defaults({
+  static: path.resolve(__dirname, '..', 'client', 'build'),
+})
 const port = process.env.PORT || 5000
 
 server.use(middlewares)
 server.use(router)
 
-server.listen(port)
+server.get('*', (req, res) => {
+  res.sendFile(path.resolve(__dirname, '..', 'client', 'build', 'index.html'))
+})
 
-// "start": "json-server --watch db.json --port ${PORT:-5000} --static ../client/build"
+server.listen(port)

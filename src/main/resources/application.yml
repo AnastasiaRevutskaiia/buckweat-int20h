@@ -1,0 +1,17 @@
+spring:
+  application.name: app-store-prices
+  jackson:
+    deserialization.fail-on-unknown-properties: true
+  messages:
+    basename: messages
+    use-code-as-default-message: true
+springfox.documentation.swagger.v2.path: /swagger/documentation
+
+server:
+  port: 9999
+  servlet.contextPath: /v1
+  forward-headers-strategy: native
+
+logging.level:
+  root: INFO
+  com.society: DEBUG

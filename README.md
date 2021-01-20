@@ -30,6 +30,14 @@ npm run dev
 
 In development mode client accessible on <http://localhost:3000>
 
+### Deploy
+
+Heroku:
+
+```
+node heroku-deploy.js
+```
+
 ### Usefull resources
 
 - [Buckweat images](https://www.google.com/search?q=buckwheat&client=ubuntu&hs=Ct1&channel=fs&sxsrf=ALeKk00OFw8y4zvhSVM7NqiWHbxpmlM89w:1611090841175&source=lnms&tbm=isch&sa=X&ved=2ahUKEwiJvaeK9ajuAhWolIsKHSq7AAsQ_AUoAXoECAwQAw&biw=2310&bih=1186)

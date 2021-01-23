@@ -52,7 +52,43 @@
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root"></div>
+    <header>
+      <nav class="blue-grey">
+        <div class="nav-wrapper">
+          <div class="row">
+            <div class="col s12">
+              <a
+                href="#"
+                data-target="sidenav-1"
+                class="left sidenav-trigger hide-on-medium-and-up"
+              >
+                <i class="material-icons">menu</i>
+              </a>
+              <a
+                href="https://codepen.io/collection/nbBqgY"
+                class="brand-logo center"
+              >
+                Buckweat prices
+              </a>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <ul id="sidenav-1" class="sidenav sidenav-fixed">
+      <li>
+        <a class="subheader">Check the following:</a>
+      </li>
+      <li>
+        <a href="#prices">Prices</a>
+      </li>
+      <li>
+        <a href="#plot">Plot</a>
+      </li>
+    </ul>
+
+    <main id="root"></main>
     <!--
       This HTML file is a template.
       If you open it directly in the browser, you will see an empty page.

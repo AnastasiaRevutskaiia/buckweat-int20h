@@ -8,13 +8,17 @@ export const BuckweatPrices = () => {
   const { isLoading, asyncRequest } = useAsyncRequest()
 
   useEffect(() => {
+    debugger
     async function fetchPrices() {
-      const data = await asyncRequest(
-        // 'https://jsonplaceholder.typicode.com/todos?_limit=3'
-        '/storePrices'
-      )
+      debugger
+      const PROXY_URL = 'https://quiet-inlet-75795.herokuapp.com/' // TODO: ask to configure server
+      const URL = 'https://store-prices-app.herokuapp.com/v1/prices/buckwheat'
+      const data = await asyncRequest(PROXY_URL + URL)
+      debugger
       setPrices(
-        data ? data.sort((a, b) => a.currentPrice - b.currentPrice) : []
+        data && data.storePrices
+          ? data.storePrices.sort((a, b) => a.price - b.price)
+          : []
       )
     }
     fetchPrices()
@@ -23,5 +27,9 @@ export const BuckweatPrices = () => {
   if (isLoading) {
     return <Loader />
   }
-  return <PricesList prices={prices} />
+  return (
+    <div id="prices">
+      <PricesList prices={prices} />
+    </div>
+  )
 }

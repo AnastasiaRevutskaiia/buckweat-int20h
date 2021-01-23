@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { useAsyncRequest } from '../hooks/useAsyncRequest'
-import PricesList from './PricesList.js'
-import Loader from './Loader.js'
+import BasicToolbarFilteringGrid from './BasicToolbarFilteringGrid.js'
 
 export const BuckweatPrices = () => {
   const [prices, setPrices] = useState([])
@@ -24,12 +23,9 @@ export const BuckweatPrices = () => {
     fetchPrices()
   }, [asyncRequest])
 
-  if (isLoading) {
-    return <Loader />
-  }
   return (
     <div id="prices">
-      <PricesList prices={prices} />
+      <BasicToolbarFilteringGrid prices={prices} isLoading={isLoading} />
     </div>
   )
 }

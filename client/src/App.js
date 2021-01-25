@@ -1,18 +1,21 @@
-import React, { useEffect } from 'react'
-import { BuckweatPrices } from './components/BuckweatPrices.js'
+import React from 'react'
+import { BuckwheatPrices } from './components/BuckwheatPrices.js'
 import { PricesPlot } from './components/PricesPlot.js'
-import M from 'materialize-css'
 import './App.css'
 
 function App() {
-  useEffect(() => {
-    // const elems = document.querySelectorAll('.sidenav')
-    // M.Sidenav.init(elems)
-  })
   return (
     <div className="container">
-      <BuckweatPrices />
-      <PricesPlot />
+      <div className="section-container">
+        <div id="prices">
+          <BuckwheatPrices />
+        </div>
+      </div>
+      <div className="section-container">
+        <div id="plot">
+          <PricesPlot />
+        </div>
+      </div>
     </div>
   )
 }

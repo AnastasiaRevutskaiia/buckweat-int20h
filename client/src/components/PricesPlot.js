@@ -13,10 +13,10 @@ export const PricesPlot = () => {
     exportEnabled: true,
     theme: 'light1', // "light1", "dark1", "dark2"
     title: {
-      text: 'Buckweat rate',
+      text: 'Buckwheat rate',
     },
     axisY: {
-      title: 'Buckweat price',
+      title: 'Buckwheat price',
       suffix: ' y.o.',
     },
     axisX: {
@@ -34,10 +34,5 @@ export const PricesPlot = () => {
       },
     ],
   }))
-  return (
-    <div id="plot">
-      <h1>This is plot</h1>
-      <CanvasJSChart options={options()} />
-    </div>
-  )
+  return <CanvasJSChart options={options()} />
 }

@@ -1,0 +1,18 @@
+.user-view {
+  height: 168px;
+  display: flex;
+  flex-direction: column;
+}
+
+#sidenav-1 blockquote {
+  border-left: 5px solid #ff7043 !important;
+}
+
+#sidenav-1 blockquote {
+  line-height: 24px;
+}
+
+#sidenav-1 {
+  display: flex;
+  flex-direction: column;
+}

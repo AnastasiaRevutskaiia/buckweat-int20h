@@ -11,3 +11,15 @@ footer {
     padding-left: 0;
   }
 }
+
+.section-container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#prices {
+  min-height: 700px;
+  width: 100%;
+}

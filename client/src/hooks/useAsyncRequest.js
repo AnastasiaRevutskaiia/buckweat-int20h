@@ -10,8 +10,13 @@ function useAsyncRequest() {
         body = JSON.stringify(body)
         headers['Content-Type'] = 'application/json'
       }
+      debugger
 
-      const response = await fetch(url, { method, body, headers })
+      const response = await fetch(url, {
+        method,
+        body,
+        headers,
+      })
       const data = await response.json()
 
       if (!response.ok) {

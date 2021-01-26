@@ -17,6 +17,7 @@
     "linebreak-style": ["error", "unix"],
     "quotes": ["error", "single"],
     "semi": ["error", "never"],
-    "no-unused-vars": "warn"
+    "no-unused-vars": "warn",
+    "no-debugger": "off"
   }
 }

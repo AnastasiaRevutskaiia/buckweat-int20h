@@ -1,11 +1,21 @@
 import React from 'react'
-import { BuckweatPrices } from './components/BuckweatPrices.js'
+import { BuckwheatPrices } from './components/BuckwheatPrices.js'
+import { PricesPlot } from './components/PricesPlot.js'
 import './App.css'
 
 function App() {
   return (
     <div className="container">
-      <BuckweatPrices />
+      <div className="section-container">
+        <div id="prices">
+          <BuckwheatPrices />
+        </div>
+      </div>
+      <div className="section-container">
+        <div id="statistics">
+          <PricesPlot />
+        </div>
+      </div>
     </div>
   )
 }

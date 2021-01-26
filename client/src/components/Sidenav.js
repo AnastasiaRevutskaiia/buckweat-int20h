@@ -58,7 +58,7 @@ export default function Sidenav() {
           setIsStatistics(true)
         }}
       >
-        <a href="#plot">Statistics</a>
+        <a href="#statistics">Statistics</a>
       </li>
       <li>
         <div className="divider"></div>

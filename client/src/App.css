@@ -1,25 +1,20 @@
-header,
-main,
-footer {
-  padding-left: 300px;
-}
-
-@media only screen and (max-width: 992px) {
-  header,
-  main,
-  footer {
-    padding-left: 0;
-  }
-}
-
 .section-container {
   height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  margin-top: 20px;
 }
 
 #prices {
   min-height: 700px;
+  min-width: 900px;
   width: 100%;
+}
+
+#statistics {
+  min-height: 700px;
+  min-width: 900px;
+  width: 100%;
+  margin-top: 300px;
 }

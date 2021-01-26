@@ -12,7 +12,7 @@ function App() {
         </div>
       </div>
       <div className="section-container">
-        <div id="plot">
+        <div id="statistics">
           <PricesPlot />
         </div>
       </div>

@@ -1,7 +1,6 @@
 const shell = require('shelljs')
 
 function deployToHeroku() {
-  debugger
   if (!shell.which('heroku')) {
     shell.echo(
       colors.red.bold(

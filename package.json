@@ -9,10 +9,11 @@
     "server:install": "npm install --prefix mock_server",
     "server:start": "npm run start --prefix mock_server",
     "price-service:build": "mvn clean install",
+    "price-service:start": "./buckwheat-service/target/buckwheat-service-1.0-SNAPSHOT.jar",
     "docker:build": "docker build -t buckwheat-service ./buckwheat-service",
     "docker:start": "docker run -p ${DOCKER_PORT:-9999}:9999 -e SERP_WOW_TOKEN=${SERP_WOW_TOKEN} buckwheat-service",
     "preinstall": "npm run client:install && npm run server:install",
-    "build": "npm run client:build",
+    "build": "npm run client:build && npm run price-service:build",
     "start": "concurrently \"npm run server:start\" \"npm run price-service:start\"",
     "dev": "concurrently \"npm run server:start\" \"npm run client:start\" \"npm run docker:start\""
   },
@@ -29,9 +30,6 @@
   "dependencies": {
     "concurrently": "^5.3.0",
     "cross-env": "^7.0.3",
-    "grunt": "^1.3.0",
-    "grunt-cli": "^1.3.2",
-    "grunt-contrib-uglify": "^5.0.0",
     "shelljs": "^0.8.4"
   },
   "engines": {

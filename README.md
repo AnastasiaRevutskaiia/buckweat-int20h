@@ -4,6 +4,12 @@
 
 Website for viewing prices on buckwheat from Ukrainian online stores
 
+### Prerequisites
+
+1. Node + npm
+2. Maven + OpenJDK
+3. Docker
+
 ### Installation
 
 ```
@@ -17,6 +23,15 @@ npm run build
 ```
 
 ### Run
+
+Before running you need to get `SERP_WOW_TOKEN`.  
+More info about this token can be found [here](./buckwheat-service/README.md)
+
+Run:
+
+```
+export SERP_WOW_TOKEN=YOUR_TOKEN
+```
 
 ```
 npm start

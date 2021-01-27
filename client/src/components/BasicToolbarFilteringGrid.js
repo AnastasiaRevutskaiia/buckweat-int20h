@@ -105,11 +105,11 @@ const columns = [
     },
   },
 ]
-
 export default function BasicToolbarFilteringGrid({ prices, isLoading }) {
   const [rows, setRows] = useState([])
   useEffect(() => {
-    setRows(prices.map((elem, idx) => ({ ...elem, ['id']: idx })))
+    const sortedPrices = prices ? prices.sort((a, b) => a.price - b.price) : []
+    setRows(sortedPrices.map((elem, idx) => ({ ...elem, ['id']: idx })))
   }, [prices])
 
   return (

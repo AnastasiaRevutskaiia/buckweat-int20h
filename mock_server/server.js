@@ -8,10 +8,12 @@ const middlewares = jsonServer.defaults({
 const port = process.env.PORT || 5000
 
 server.use(middlewares)
-server.use(router)
+// server.use(router)
 
 server.get('*', (req, res) => {
   res.sendFile(path.resolve(__dirname, '..', 'client', 'build', 'index.html'))
 })
 
-server.listen(port)
+server.listen(port, () => {
+  console.log('Server started at port ' + port)
+})

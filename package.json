@@ -8,10 +8,13 @@
     "client:start": "npm run start --prefix client",
     "server:install": "npm install --prefix mock_server",
     "server:start": "npm run start --prefix mock_server",
+    "price-service:build": "mvn clean install",
+    "docker:build": "docker build -t buckwheat-service ./buckwheat-service",
+    "docker:start": "docker run -p ${DOCKER_PORT:-9999}:9999 -e SERP_WOW_TOKEN=${SERP_WOW_TOKEN} buckwheat-service",
     "preinstall": "npm run client:install && npm run server:install",
-    "build": "npm run client:build",
-    "start": "npm run server:start",
-    "dev": "concurrently \"npm run server:start\" \"npm run client:start\""
+    "build": "npm run client:build && npm run price-service:build && npm run docker:build",
+    "start": "concurrently \"npm run server:start\" \"npm run docker:start\"",
+    "dev": "concurrently \"npm run server:start\" \"npm run client:start\" \"npm run docker:start\""
   },
   "repository": {
     "type": "git",
